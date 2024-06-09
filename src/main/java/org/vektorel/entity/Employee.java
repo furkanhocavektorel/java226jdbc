@@ -80,4 +80,17 @@ public class Employee {
     public void setReports_to(Short reports_to) {
         this.reports_to = reports_to;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employee_id=" + employee_id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", title='" + title + '\'' +
+                ", birth_date=" + birth_date +
+                ", address='" + address + '\'' +
+                ", reports_to=" + reports_to +
+                '}';
+    }
 }
