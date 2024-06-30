@@ -32,4 +32,7 @@ public class Admin {
 
     @Embedded
     Iletisim iletisim;
+
+    @Enumerated(EnumType.STRING)
+    private Cinsiyet cinsiyet;
 }
