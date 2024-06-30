@@ -13,6 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 @Entity
 public class Kitap {
     @Id
@@ -21,5 +22,6 @@ public class Kitap {
     private String ad;
     private int sayfaSayisi;
     private Date baskiYili;
+
 
 }
