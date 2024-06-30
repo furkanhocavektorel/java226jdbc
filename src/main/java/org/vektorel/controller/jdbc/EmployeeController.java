@@ -1,9 +1,9 @@
-package org.vektorel.controller;
+package org.vektorel.controller.jdbc;
 
 import org.vektorel.dto.response.EmployeeByIdResponseDto;
 import org.vektorel.dto.response.EmployeeListResponseDto;
-import org.vektorel.entity.Employee;
-import org.vektorel.service.EmployeeService;
+import org.vektorel.entity.jdbc.Employee;
+import org.vektorel.service.jdbc.EmployeeService;
 
 import java.util.List;
 

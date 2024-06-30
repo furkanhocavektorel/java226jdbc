@@ -1,4 +1,4 @@
-package org.vektorel.entity;
+package org.vektorel.entity.jdbc;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package org.vektorel.utility;
+package org.vektorel.utility.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

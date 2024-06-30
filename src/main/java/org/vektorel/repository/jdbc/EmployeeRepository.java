@@ -1,7 +1,7 @@
-package org.vektorel.repository;
+package org.vektorel.repository.jdbc;
 
-import org.vektorel.entity.Employee;
-import org.vektorel.utility.DbConnection;
+import org.vektorel.entity.jdbc.Employee;
+import org.vektorel.utility.jdbc.DbConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -98,37 +98,7 @@ public class EmployeeRepository {
     }
 
 
-    public List<Employee> findEmployeeList(){
-        String sql= "select title,birthdate from employees";
-        Connection c= DbConnection.openConnection();
 
-        List<Employee> employees= new ArrayList<>();
-
-        try {
-            PreparedStatement p=c.prepareStatement(sql);
-            ResultSet set=p.executeQuery();
-            while (set.next()){
-                Employee employee= new Employee();
-                employee.setFirst_name(set.getString("first_name"));
-                employee.setLast_name(set.getString("last_name"));
-                employee.setTitle(set.getString("title"));
-                employee.setBirth_date(set.getDate("birth_date"));
-                employee.setEmployee_id(set.getShort("employee_id"));
-                employees.add(employee);
-
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }finally {
-            try {
-                c.close();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return employees;
-    }
 
 
 }
