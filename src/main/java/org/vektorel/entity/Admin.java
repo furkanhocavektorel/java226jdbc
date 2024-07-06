@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 @Entity
 @Table(name = "tbladmin")
 public class Admin {
@@ -27,7 +28,7 @@ public class Admin {
     private String ad;
 
     // list veri kayıt etmek icin @elementcollection kullanılmalı
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> telefonNo;
 
     @Embedded

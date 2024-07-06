@@ -13,4 +13,8 @@ public class AdminController {
     public void save(AdminSaveRequestDto requestDto){
         adminService.save(requestDto);
     }
+
+    public void delete(long id){
+        adminService.delete(id);
+    }
 }

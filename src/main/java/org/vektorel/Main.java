@@ -6,6 +6,7 @@ import org.vektorel.controller.jdbc.EmployeeController;
 import org.vektorel.dto.request.AdminSaveRequestDto;
 import org.vektorel.dto.request.KitapSaveRequestDto;
 import org.vektorel.dto.response.EmployeeByIdResponseDto;
+import org.vektorel.entity.Admin;
 import org.vektorel.entity.Cinsiyet;
 import org.vektorel.entity.jdbc.Employee;
 import org.vektorel.repository.AdminRepository;
@@ -46,9 +47,9 @@ public class Main {
                         .cinsiyet(Cinsiyet.ERKEK)
                 .build());*/
 
-        KitapRepository kitapRepository= new KitapRepository();
+        //KitapRepository kitapRepository= new KitapRepository();
 
-        System.out.println("*** KİTAP LİSTESİ***");
+ /*       System.out.println("*** KİTAP LİSTESİ***");
         kitapRepository.findAll().forEach(System.out::println);
         System.out.println("*** KİTAP LİSTESİ SON***");
 
@@ -56,7 +57,13 @@ public class Main {
         System.out.println(kitapRepository.findById(2));
         System.out.println(" *** 2 idli kitap SON***");
 
-        kitapRepository.delete(kitapRepository.findById(1));
+        kitapRepository.delete(kitapRepository.findById(1));*/
+
+        //kitapRepository.findByNameHqlQuery("Hobbit").forEach(System.out::println);
+
+        AdminRepository adminRepository= new AdminRepository();
+
+        System.out.println(adminRepository.findById(1l));
 
 
     }

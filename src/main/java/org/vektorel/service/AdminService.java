@@ -24,5 +24,10 @@ public class AdminService {
 
     }
 
+    public void delete(long id){
+        Admin admin=adminRepository.findById(id);
+        adminRepository.Delete(admin);
+    }
+
 
 }
